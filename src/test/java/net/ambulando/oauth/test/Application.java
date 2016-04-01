@@ -27,8 +27,7 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 
 @SpringBootApplication
 @ComponentScan({
-    "net.ambulando.oauth.configuration",
-    "net.ambulando.oauth.services",
+    "net.ambulando.oauth",
     "net.ambulando.oauth.test.resources",
     "net.ambulando.oauth.test.services",
 })

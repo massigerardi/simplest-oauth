@@ -47,10 +47,34 @@ securitySettings:
       - "test"
 ```
 
+## Define components scan
+
+You need to import the configuration adding the following package in one of your own configuration classes:
+
+```java
+@ComponentScan({
+    "net.ambulando.oauth",
+    ...,
+})
+```
 ## UserService
 
 implement the interface `net.ambulando.oauth.services.UserSecurityService` to retrieve your users.
 The class returned as user must implements `org.springframework.security.core.userdetails.UserDetails`.
+
+## Token Store
+
+The library uses `InMemoryTokenStore` as default.
+If a different TokenStore is desired, you create a different implementation of `TokenStore` and must annotate the bean with `@Primary`
+
+```java
+
+@Bean
+@Primary
+public TokenStore myTokenStore() {
+...
+}
+```
 
 ## Setting up rules
 
