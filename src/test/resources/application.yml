@@ -1,0 +1,26 @@
+logging:
+  level:
+    org.springframework: DEBUG
+
+securitySettings:
+  resourceId: "test"
+  clients:
+  - name: "clientapp"
+    secret: "123456"
+    scopes:
+      - "read"
+      - "write"
+    grantTypes:
+      - "password"
+      - "refresh_token"
+    resourceIds:
+    - "test"
+  - name: "clienttest"
+    secret: "123654"
+    scopes:
+      - "read"
+      - "write"
+    grantTypes:
+      - "password"
+    resourceIds:
+      - "test"
