@@ -1,6 +1,6 @@
 logging:
   level:
-    org.springframework: DEBUG
+    org.springframework: WARN
 
 securitySettings:
   resourceId: "test"
